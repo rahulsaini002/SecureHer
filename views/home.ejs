@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="/css/home.css">
+    <style>
+    .quote-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .quote-line {
+            color: rgb(149, 0, 186);
+   
+
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            font-style: italic;
+            font-size: 40px;
+            /* background-color: #f5f5f5; */
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .quote-line::before,
+        .quote-line::after {
+            content: '"';
+            font-size: 40px;
+            color: rgb(149, 0, 186);
+            margin: 0 5px;
+        }
+
+        .emergency-main{
+   
+   width: 400px;
+   height: 400px;
+   border-radius: 50%;
+   background: linear-gradient(45deg, #450681, #cf96f2);
+   background: linear-gradient(45deg, #6e035c, #c46ec4); /* Gradient background */
+   color: #000000;
+   border: none;
+   cursor: pointer;
+   font-size: 50px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-weight: bolder;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+   transition: transform 0.2s ease-in-out;
+   /* margin: auto; */
+   margin-left: 552px;
+   margin-top: 30px;
+
+}
+.emergency-main:hover{
+   transform: scale(1.1); /* Scale up slightly on hover */
+
+}
+.emergency-main:active {
+    background: linear-gradient(45deg, #450681, #cf96f2);
+ }
+       
+    </style>
+<%- include ('partials/header.ejs')%>
+
+
+
+<div class="quote-container">
+    <!-- Add your stylish quote line -->
+    <div class="quote-line">
+        A Woman with a voice is  by definition a strong Woman
+    </div>
+</div>
+<button class="emergency-main" type="button" onclick="locateMe()">Emergency Alert !</button>
+
+
+<div class="stage">
+    <div class="left-stage"></div>
+    <div class="center-stage">
+        <%- include ('partials/content.ejs')%>
+    </div>
+    <div class="right-stage"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- <script src="/js/home.js"></script> -->
+<script src="/js/style.js"></script>
+</body>
+</html>
